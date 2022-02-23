@@ -5,11 +5,9 @@ import { Component, OnInit } from "@angular/core";
 import {
   FormGroup,
   FormBuilder,
-  FormControl,
   Validators,
 } from "@angular/forms";
 import { EmployeeService } from "../services/employee.service";
-import { IEmployee } from "../interfaces/iemployee";
 
 @Component({
   selector: "app-create-employee",
@@ -30,7 +28,7 @@ export class CreateEmployeeComponent implements OnInit {
   }
 
   // create reactive form
-  private _createForm() {
+  private _createForm(): void {
     this.employeeForm = this._fb.group({
       name: ["", Validators.required],
       position: ["Manager", Validators.required],
@@ -38,19 +36,18 @@ export class CreateEmployeeComponent implements OnInit {
     });
   }
 
-  // submit new employee to server
-  onSubmit() {
+  onSubmit(): void {
     const param = this.employeeForm.value;
-    this._employeeService.create(param).subscribe(
-      (employee: IEmployee) => {
+    this._employeeService.create(param).subscribe({
+      next: () => {
         this.loader = false;
         this.employeeForm.reset({ position: "Manager" });
       },
-      (error) => {
-        console.error(error);
+      error: (error) => {
+        console.error("An onSubmit function error occured", error);
         this.loader = false;
-      }
-    );
+      },
+    });
     window.location.reload();
   }
 }

@@ -36,17 +36,21 @@ app.post("/employee", (req, res) => {
   try {
     pusher.trigger("employee", "new", employee);
     res.send(employee);
-  } catch(err) {
+  } catch (err) {
     () => console.log("error: ", err);
   }
-
 });
 
 app.delete("/employee/:id", (req, res) => {
   const employee = mocks.find((emp) => emp.id === req.params.id);
+  console.log('employee; ', employee);
   mocks = mocks.filter((emp) => emp.id !== employee.id);
-  pusher.trigger("employee", "deleted", employee);
-  res.send(employee);
+  try {
+    pusher.trigger("employee", "deleted", employee);
+    res.send(employee);
+  } catch (err) {
+    () => console.log("error: ", err);
+  }
 });
 
 app.get("/employee", (req, res) => {

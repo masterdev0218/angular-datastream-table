@@ -21,7 +21,7 @@
       <td>{{ employee.salary }}</td>
       <td>{{ employee.createdAt | date: 'yyy/MM/dd' }}</td>
       <td>
-        <button class="btn btn-primary btn-sm">
+        <button (click)="edit(employee)" class="btn btn-primary btn-sm">
           <span class="oi oi-pencil"></span>
         </button>
         <button (click)="delete(employee)" class="btn btn-danger btn-sm">
