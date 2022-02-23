@@ -1,6 +1,6 @@
 # :zap: Angular Datastream Table
 
-* App with realtime communication between app and server using a [Pusher](https://pusher.com/) channel for notifications/updates etc.
+* App with realtime communication between app and server using a websocket-based [Pusher](https://pusher.com/) channel for notifications/updates etc.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -35,16 +35,16 @@ And can scale up without significant changes to tooling, architecture, or develo
 
 ## :signal_strength: Technologies
 
-* [Angular v11](https://angular.io/)
-* [rxjs v6](http://reactivex.io/) observable streams for asynschronous programming.
+* [Angular v13](https://angular.io/)
+* [rxjs v7](http://reactivex.io/) observable streams for asynschronous programming.
 * [Pusher-js v7](https://pusher.com/) Real-time communication scalable features.
-* [Bootstrap v4](https://getbootstrap.com/). Links added to `angular.json "styles"`
+* [Bootstrap v5](https://getbootstrap.com/). Links added to `angular.json "styles"`
 * [NgAlert v2](https://github.com/theo4u/ngAlert) alert component with different types of alert. Link added to `angular.json "styles"`.
 
 ## :floppy_disk: Setup
 
 * Install dependencies using `npm i`
-* Get your own API key and Cluster name from [Pusher-js v5.1.1](https://pusher.com/) Sandbox Plan
+* Get your own API key and Cluster name from [Pusher-js](https://pusher.com/) Sandbox Plan
 * Add Pusher API Key etc. to .env file
 * Add API_KEY & CLUSTER values to `environment.ts` & `environment.prod.ts`
 * Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`
@@ -79,21 +79,25 @@ And can scale up without significant changes to tooling, architecture, or develo
 ## :cool: Features
 
 * Forms created using [Angular's reactive forms](https://angular.io/api/forms/ReactiveFormsModule).
-* Utility/helper classes used from [Bootstrap 4](https://getbootstrap.com/).
+* Utility/helper classes used from [Bootstrap v5](https://getbootstrap.com/).
 * real-time data and functionality using [Pusher event-based API 'Pusher Channel'](https://pusher.com/).
 * working local server backend.
 * Data access services delegated to separate service components.
-* Updated to latest Angular v11. Dependencies updated and all errors and dependency conflicts resolved.
+* Updated to latest Angular v13. Dependencies updated and all errors and dependency conflicts resolved.
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working front and backend. UI adds employees to the list without refreshing the browser (note: browser for server (port 2000) does have to be refreshed to show the changes). Employees can be added & deleted successfully but the edit component is not coded so not possible to edit employee records.
-* To-Do: Look at employee edit function. Customise app and add functionality. Consider currency pull-down menu for salary input. Fix server.js to remove error message: `TypeError: pusher.trigger is not a function`.
+* Status: Working front and backend. UI adds employees to the list. Employees can be added & deleted successfully but the edit component is not coded so not possible to edit employee records.
+* To-Do: Look at employee edit function. Customise app and add functionality. Consider currency pull-down menu for salary input.
 
 ## :clap: Inspiration
 
 * [Christian Nwamba's tutorial: BUILD A REALTIME TABLE WITH ANGULAR](https://pusher.com/tutorials/realtime-table-angular),
 
+## :file_folder: License
+
+* This project is licensed under the terms of the MIT license.
+
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
