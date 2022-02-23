@@ -33,8 +33,13 @@ app.post("/employee", (req, res) => {
   };
   mocks.push(employee); // like our db
   // trigger this update to pusher channel listeners
-  pusher.trigger("employee", "new", employee);
-  res.send(employee);
+  try {
+    pusher.trigger("employee", "new", employee);
+    res.send(employee);
+  } catch(err) {
+    () => console.log("error: ", err);
+  }
+
 });
 
 app.delete("/employee/:id", (req, res) => {
