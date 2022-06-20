@@ -3,8 +3,8 @@
 
 import { Component, OnInit } from "@angular/core";
 import {
-  FormGroup,
-  FormBuilder,
+  UntypedFormGroup,
+  UntypedFormBuilder,
   Validators,
 } from "@angular/forms";
 import { EmployeeService } from "../services/employee.service";
@@ -15,11 +15,11 @@ import { EmployeeService } from "../services/employee.service";
   styles: [],
 })
 export class CreateEmployeeComponent implements OnInit {
-  employeeForm: FormGroup;
+  employeeForm: UntypedFormGroup;
   loader: boolean;
 
   constructor(
-    private _fb: FormBuilder,
+    private _fb: UntypedFormBuilder,
     private _employeeService: EmployeeService
   ) {}
 
