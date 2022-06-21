@@ -16,6 +16,7 @@
   * [:cool: Features](#cool-features)
   * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
+  * [:file_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
@@ -35,7 +36,7 @@ And can scale up without significant changes to tooling, architecture, or develo
 
 ## :signal_strength: Technologies
 
-* [Angular v13](https://angular.io/)
+* [Angular v14](https://angular.io/)
 * [rxjs v7](http://reactivex.io/) observable streams for asynschronous programming.
 * [Pusher-js v7](https://pusher.com/) Real-time communication scalable features.
 * [Bootstrap v5](https://getbootstrap.com/). Links added to `angular.json "styles"`
@@ -83,7 +84,6 @@ And can scale up without significant changes to tooling, architecture, or develo
 * real-time data and functionality using [Pusher event-based API 'Pusher Channel'](https://pusher.com/).
 * working local server backend.
 * Data access services delegated to separate service components.
-* Updated to latest Angular v13. Dependencies updated and all errors and dependency conflicts resolved.
 
 ## :clipboard: Status & To-Do List
 
