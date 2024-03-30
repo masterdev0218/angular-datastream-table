@@ -36,9 +36,9 @@ And can scale up without significant changes to tooling, architecture, or develo
 
 ## :signal_strength: Technologies
 
-* [Angular v14](https://angular.io/)
+* [Angular v15](https://angular.io/)
 * [rxjs v7](http://reactivex.io/) observable streams for asynschronous programming.
-* [Pusher-js v7](https://pusher.com/) Real-time communication scalable features.
+* [Pusher-js v8](https://pusher.com/) Real-time communication scalable features.
 * [Bootstrap v5](https://getbootstrap.com/). Links added to `angular.json "styles"`
 * [NgAlert v2](https://github.com/theo4u/ngAlert) alert component with different types of alert. Link added to `angular.json "styles"`.
 
@@ -50,6 +50,7 @@ And can scale up without significant changes to tooling, architecture, or develo
 * Add API_KEY & CLUSTER values to `environment.ts` & `environment.prod.ts`
 * Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`
 * Open a second command terminal
+* Install nodemon globally if you don't have it already
 * Run `nodemon server.js` to run the server backend. Navigate to `http://localhost:2000/`. Restarts with changes
 * Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
